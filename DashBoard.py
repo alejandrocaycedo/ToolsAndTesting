@@ -10,7 +10,7 @@ import streamlit as st
 from streamlit_folium import st_folium
 import folium
 import pandas as pd
-import webbrowser
+#import webbrowser
 
 from folium import plugins
 from folium.plugins.marker_cluster import MarkerCluster # Agrega los puntos espaciales
