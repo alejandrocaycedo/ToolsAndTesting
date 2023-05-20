@@ -16,10 +16,10 @@ from folium import plugins
 from folium.plugins.marker_cluster import MarkerCluster # Agrega los puntos espaciales
 
 #from folium.folium import Map
-from folium.map import Marker
+#from folium.map import Marker
 
 # importar streamlit para diagramar la APP
-import streamlit as st
+
 
 APP_TITLE = 'DASHBOARD MONITOREO DE SOLIDOS - TOOLS AND TESTING'
 APP_SUB_TITLE = 'VER 1.0'
