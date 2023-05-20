@@ -7,7 +7,7 @@ Created on Fri May 19 17:18:17 2023
 #Librerias
 # importar Folium
 import streamlit as st
-from streamlit_folium import st_folium
+from streamlit_folium import st_folium()
 import folium
 import pandas as pd
 #import webbrowser
@@ -41,13 +41,6 @@ def main():
     
     
     # DISPLAY METRICS
-    
-    
-    
-    
-    
-    
-    
-    
+        
 if __name__ == "_main_":
     main()
