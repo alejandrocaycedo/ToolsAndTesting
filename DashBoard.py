@@ -5,7 +5,7 @@ Created on Fri May 19 17:18:17 2023
 @author: ALEJANDRO
 """
 import streamlit as st
-from streamlit_folium import st_folium
+from streamlit_folium import folium_static
 import folium
 
 m = folium.Map (location=[39.949610, -75.150282], zoom_start=16)
