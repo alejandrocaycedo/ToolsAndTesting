@@ -8,7 +8,6 @@ setuptools.setup(
     description="Render Folium objects in Streamlit",
     long_description="",
     long_description_content_type="text/plain",
-    url="https://github.com/alejandrocaycedo/ToolsAndTesting/streamlit_folium",
     packages=setuptools.find_packages(),
     include_package_data=True,
     classifiers=[],
