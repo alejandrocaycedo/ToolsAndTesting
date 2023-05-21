@@ -26,7 +26,6 @@ jobs:
       run: |
         cd streamlit_folium/frontend/
         npm install
-        npm run build
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
