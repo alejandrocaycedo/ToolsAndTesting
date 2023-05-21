@@ -14,5 +14,3 @@ folium.Marker(
     popup="Liberty Bell",
     tooltip="Liberty Bell"
     ).add_to(m)
-
-st_data = st_folium(m, width = 725)
