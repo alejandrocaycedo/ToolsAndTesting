@@ -28,7 +28,7 @@ st.title(APP_TITLE)
 st.caption(APP_SUB_TITLE)
     
     #Load Data
-pozos = pd.read_excel('alejandrocaycedo/ToolsAndTesting/main/Pozos.xlsx')
+pozos = pd.read_excel('/app/toolsandtestint/Pozos.xlsx')
 st.write(pozos.head())
 
     
