@@ -87,10 +87,12 @@ capa_pozos = folium.FeatureGroup(name="pozos")
 mc_pozos.add_to(capa_pozos)
 mapa.add_child(capa_pozos)
 
-MapaCalor = folium.FeatureGroup(name="MapaCalor")
-mapa.add_child(MapaCalor)
-HeatMap(DataHeat).add_to(mapa)
+MapaCalor = mapa = folium.Map(location = [7.10, -73.98],
+                     zoom_start = 12)
+HeatMap(DataHeat).add_to(MapaCalor)
+
 st_mapa = st_folium(mapa, width=800, height=650)
+st_MapaCalor =  st_folium(MapaCalor, width=800, height=650)
     # DISPLAY METRICS
 
 st.write(pozos.shape)
