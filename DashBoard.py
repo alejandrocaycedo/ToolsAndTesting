@@ -6,6 +6,8 @@ Created on Fri May 19 17:18:17 2023
 """
 #Librerias
 # importar Folium
+import streamlit as st
+from streamlit_folium import st_folium
 import folium
 import pandas as pd
 #import webbrowser
@@ -17,8 +19,7 @@ from folium.plugins.marker_cluster import MarkerCluster # Agrega los puntos espa
 from folium.map import Marker
 
 # importar streamlit para diagramar la APP
-import streamlit as st
-from streamlit_folium import st_folium
+
 
 APP_TITLE = 'Monitoreo de arrastre de sólidos - TOOLS AND TESTING'
 APP_SUB_TITLE = 'Ver 1.0 - todos los derechos reservados'
@@ -34,10 +35,6 @@ st.write(pozos.head())
 
     
     # DISPLAY FILTERS AND MAP
-mapa = folium.Map(location = [7.10, -73.98],
-                     zoom_start = 12)
-
-
 nombre = list(pozos["NamePozo"])
 Latitud = list(pozos["Latitud"])
 Longitud = list(pozos["Longitud"])
@@ -57,7 +54,8 @@ prefijo = list(pozos["Prefijo"])
 Ticono = list(pozos["icono"])
 
 mc_pozos = MarkerCluster()
-
+mapa = folium.Map(location = [7.10, -73.98],
+                     zoom_start = 12)
 #Pozos al mapa
 for nomb,lat,lon, bw, bo, bf, bs, PMp, PMm, um25, um45, um106, um212, um42, col_i, pref, Tico in zip(nombre, Latitud, Longitud, BWPD, BOPD, BFPD, BSW, PPMp, PPMm, um25to45, um45to106, um106to212, um212to425, um425, color_i, prefijo, Ticono):
     mc_pozos.add_child(folium.Marker(location=[lat,lon],
@@ -71,7 +69,7 @@ capa_pozos = folium.FeatureGroup(name="pozos")
 mc_pozos.add_to(capa_pozos)
 mapa.add_child(capa_pozos)
 
-st_mapa = st_folium(mapa)
+st_mapa = st_folium(mapa, width=700, height=450)
     # DISPLAY METRICS
     
     
