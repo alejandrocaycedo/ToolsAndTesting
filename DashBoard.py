@@ -30,7 +30,7 @@ st.title(APP_TITLE)
 st.caption(APP_SUB_TITLE)
     
     #Load Data
-pozos = pd.read_excel('/app/toolsandtesting/pozos.xlsx')
+pozos = pd.read_csv('/app/toolsandtesting/Pozos.csv')
 st.write(pozos.head())
 
     
