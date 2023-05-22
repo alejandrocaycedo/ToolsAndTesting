@@ -62,7 +62,7 @@ prefijo = list(pozos["Prefijo"])
 #Ticono = list(pozos["icono"])
 
 MaxPPMm = max(PPMm)
-
+st.write(MaxPPMm)
 
 NorPPMm = []
 for i in range(len(PPMm)):
