@@ -2,15 +2,23 @@
 """
 Created on Fri May 19 17:18:17 2023
 
-@author: ALEJANDRO
+@author: LUIS ALEJANDRO CAYCEDO VILLALOBOS
 """
-#Librerias
-# importar Folium
-from pathlib import Path
-import folium
-import pandas as pd
-import webbrowser
+"""------------------------------------------------------------------
 
+IMPORTAN Y DEFINEN LAS LIBRERIAS A SER USADAS
+folium
+pandas
+streamlit
+streamlit_folium
+
+---------------------------------------------------------------------"""
+# import pandas
+import pandas as pd
+
+# importar Folium
+import folium
+import webbrowser
 from folium import plugins
 from folium.plugins.marker_cluster import MarkerCluster # Agrega los puntos espaciales
 
@@ -21,23 +29,28 @@ from folium.map import Marker
 import streamlit as st
 from streamlit_folium import st_folium
 
+"""------------------------------------------------------------------
+
+Definición del nombre de la App 
+---------------------------------------------------------------------"""
 APP_TITLE = 'Monitoreo de arrastre de sólidos - TOOLS AND TESTING'
 APP_SUB_TITLE = 'Ver 1.0 - todos los derechos reservados'
 
-#def main():
-st.set_page_config('Tools and testing - 2023')   
+
+st.set_page_config('Tools and testing - 2023')    # Define el titulo de la pagina web
 st.title(APP_TITLE)
 st.caption(APP_SUB_TITLE)
-    
-    #Load Data
+
+""" -----------------------------------------------------------------
+
+CARGA DE LOS DATOS DESDE LAS FUENTES 
+GITHUB :  RUTA /app/toolsandtesting/
+
+---------------------------------------------------------------------"""   
+        #LOAD Data
 pozos = pd.read_csv('/app/toolsandtesting/Pozos.csv', sep=';')
 
-st.write(pozos.shape)
-st.write(pozos.head())
-
-
-    
-    # DISPLAY FILTERS AND MAP
+# CARGAR LOS CAMPOS DE DATOS EN LAS LISTAS
 nombre = list(pozos["NamePozo"])
 Latitud = list(pozos["Latitud"])
 Longitud = list(pozos["Longitud"])
@@ -56,6 +69,7 @@ color_i = list(pozos["color_icono"])
 prefijo = list(pozos["Prefijo"])
 #Ticono = list(pozos["icono"])
 
+        # DISPLAY FILTERS AND MAP
 mc_pozos = MarkerCluster()
 mapa = folium.Map(location = [7.10, -73.98],
                      zoom_start = 12)
@@ -74,8 +88,9 @@ mapa.add_child(capa_pozos)
 
 st_mapa = st_folium(mapa, width=800, height=650)
     # DISPLAY METRICS
-    
-    
+
+st.write(pozos.shape)
+st.write(pozos.head())
     
     
     
