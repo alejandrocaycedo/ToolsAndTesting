@@ -61,21 +61,33 @@ color_i = list(pozos["color_icono"])
 prefijo = list(pozos["Prefijo"])
 #Ticono = list(pozos["icono"])
 
+#--------------------------------------------------
+# Calculo del maximo de PPMp
+#--------------------------------------------------
 MaxPPMp = max(PPMp)
 st.write(MaxPPMp)
 
+#--------------------------------------------------
+#  Normalización de PPMp
+#--------------------------------------------------
 NorPPMp = []
 for i in range(len(PPMp)):
     NorPPMp.append(PPMp[i]/MaxPPMp)
 del NorPPMp[0]
 st.write(NorPPMp)
 
+#-------------------------------------------------
+#  Genera los datos para el mapa de calor
+#-------------------------------------------------
 DataHeat = [0]
 for lat, log, NorPPM in zip(Latitud, Longitud, NorPPMp):
     DataHeat.append([lat, log, NorPPM])
 del DataHeat[0]
 st.write(DataHeat)
-       # DISPLAY FILTERS AND MAP
+
+#-------------------------------------------------
+# DISPLAY FILTERS AND MAP
+#-------------------------------------------------
 mc_pozos = MarkerCluster()
 mapa = folium.Map(location = [7.10, -73.98],
                      zoom_start = 12)
