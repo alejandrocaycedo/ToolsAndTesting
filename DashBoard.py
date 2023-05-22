@@ -65,7 +65,7 @@ MaxPPMm = max(PPMm)
 for i in range(len(PPMm)):
     NorPPMm = PPMm[i]/MaxPPMm
  
-DataHeat = [Latitud[0], Longitud[0], NorPPMm[0]]    
+DataHeat = float([Latitud[0], Longitud[0], NorPPMm[0]]  )  
 for i in range(len(Latitud)):
     DataHeat.append([Latitud[i], Longitud[i], NorPPMm[i]])
         # DISPLAY FILTERS AND MAP
