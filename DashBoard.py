@@ -66,7 +66,7 @@ st.write(MaxPPMp)
 
 NorPPMp = []
 for i in range(len(PPMp)):
-    NorPPMm.append(PPMp[i]/MaxPPMp)
+    NorPPMp.append(PPMp[i]/MaxPPMp)
 del NorPPMp[0]
 st.write(NorPPMp)
 
