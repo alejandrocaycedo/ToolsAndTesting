@@ -29,10 +29,10 @@ from folium.map import Marker
 import streamlit as st
 from streamlit_folium import st_folium
 
-"""------------------------------------------------------------------
+
 
 #Definición del nombre de la App 
----------------------------------------------------------------------"""
+
 APP_TITLE = 'Monitoreo de arrastre de sólidos - TOOLS AND TESTING'
 APP_SUB_TITLE = 'Ver 1.0 - todos los derechos reservados'
 
@@ -41,12 +41,12 @@ st.set_page_config('Tools and testing - 2023')
 st.title(APP_TITLE)
 st.caption(APP_SUB_TITLE)
 
-""" -----------------------------------------------------------------
+#--------------------------------------------------------------------------
 
-CARGA DE LOS DATOS DESDE LAS FUENTES 
-GITHUB :  RUTA /app/toolsandtesting/
+#CARGA DE LOS DATOS DESDE LAS FUENTES 
+#GITHUB :  RUTA /app/toolsandtesting/
 
----------------------------------------------------------------------"""   
+#---------------------------------------------------------------------  
         #LOAD Data
 pozos = pd.read_csv('/app/toolsandtesting/Pozos.csv', sep=';')
 
