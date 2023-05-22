@@ -60,12 +60,15 @@ um425 = list(pozos["mayor_425um"])
 color_i = list(pozos["color_icono"])
 prefijo = list(pozos["Prefijo"])
 #Ticono = list(pozos["icono"])
+
 MaxPPMm = max(PPMm)
+
+
 NorPPMm = []
 for i in range(len(PPMm)):
     NorPPMm.append(PPMm[i]/MaxPPMm)
 del NorPPMm[0]
-
+st.write(NorPPMm)
 DataHeat = [0]
 
 for lat, log, NorPPM in zip(Latitud, Longitud, NorPPMm):
