@@ -4,15 +4,7 @@ Created on Fri May 19 17:18:17 2023
 
 @author: LUIS ALEJANDRO CAYCEDO VILLALOBOS
 """
-"""------------------------------------------------------------------
 
-IMPORTAN Y DEFINEN LAS LIBRERIAS A SER USADAS
-folium
-pandas
-streamlit
-streamlit_folium
-
----------------------------------------------------------------------"""
 # import pandas
 import pandas as pd
 
