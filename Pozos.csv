@@ -1,4 +1,4 @@
-NamePozo;Latitud;Longitud; BWPD ; BOPD ; BFPD ;BSW; PPMp ; PPMm ; 25_45um ; 45_106um ; 106_212um ; 212_425um ; mayor_425um ; color_icono ; Prefijo ; icono 
+NamePozo ;Latitud ;Longitud ; BWPD ; BOPD ; BFPD ;BSW; PPMp ; PPMm ; 25_45um ; 45_106um ; 106_212um ; 212_425um ; mayor_425um ; color_icono ; Prefijo ; icono 
 NM1;7,1060;-73,98;240;60;300;80,00%;43,86;50,77;7,12%;56,62%;24,37%;9,22%;2,66%;red;fa;tower-observation
 NM2;7;-73,99;109,31;170,98;280,29;39,00%;27,7;45,57;7,29%;62,13%;14,31%;7,68%;8,59%;green;fa;tower-observation
 NM3;7;-73,96;3.350,00;3.350,00;6.700,00;50,00%;23,42;39,94;9,92%;15,47%;25,17%;35,60%;13,84%;green;fa;tower-observation
