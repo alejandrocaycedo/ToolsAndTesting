@@ -31,7 +31,9 @@ st.caption(APP_SUB_TITLE)
     
     #Load Data
 pozos = pd.read_csv('/app/toolsandtesting/Pozos.csv')
+st.write(pozos.shape)
 st.write(pozos.head())
+
 
     
     # DISPLAY FILTERS AND MAP
