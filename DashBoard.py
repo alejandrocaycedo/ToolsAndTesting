@@ -6,11 +6,10 @@ Created on Fri May 19 17:18:17 2023
 """
 #Librerias
 # importar Folium
-import streamlit as st
-from streamlit_folium import st_folium
+
 import folium
 import pandas as pd
-#import webbrowser
+import webbrowser
 
 from folium import plugins
 from folium.plugins.marker_cluster import MarkerCluster # Agrega los puntos espaciales
@@ -19,7 +18,8 @@ from folium.plugins.marker_cluster import MarkerCluster # Agrega los puntos espa
 from folium.map import Marker
 
 # importar streamlit para diagramar la APP
-
+import streamlit as st
+from streamlit_folium import st_folium
 
 APP_TITLE = 'Monitoreo de arrastre de sólidos - TOOLS AND TESTING'
 APP_SUB_TITLE = 'Ver 1.0 - todos los derechos reservados'
