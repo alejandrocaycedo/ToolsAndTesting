@@ -65,7 +65,8 @@ MaxPPMm = max(PPMm)
 for i in range(len(PPMm)):
     NorPPMm = PPMm[i]/MaxPPMm
     
-DataHeat = [Latitud, Longitud, NorPPMm]
+for i in range(len(Latitud)):
+    DataHeat = [Latitud[i], Longitud[i], NorPPMm[i]]
         # DISPLAY FILTERS AND MAP
 mc_pozos = MarkerCluster()
 mapa = folium.Map(location = [7.10, -73.98],
