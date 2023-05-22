@@ -65,10 +65,12 @@ NorPPMm = []
 for i in range(len(PPMm)):
     NorPPMm.append(PPMm[i]/MaxPPMm)
 
-st.write(NorPPMm)
+DataHeat = [0]
+
 for lat, log, NorPPM in zip(Latitud, Longitud, NorPPMm):
     DataHeat.append([lat, Log, NorPPM])
-        # DISPLAY FILTERS AND MAP
+st.write(DataHeat) 
+       # DISPLAY FILTERS AND MAP
 mc_pozos = MarkerCluster()
 mapa = folium.Map(location = [7.10, -73.98],
                      zoom_start = 12)
