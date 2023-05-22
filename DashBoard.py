@@ -36,8 +36,8 @@ Definición del nombre de la App
 APP_TITLE = 'Monitoreo de arrastre de sólidos - TOOLS AND TESTING'
 APP_SUB_TITLE = 'Ver 1.0 - todos los derechos reservados'
 
-
-st.set_page_config('Tools and testing - 2023')    # Define el titulo de la pagina web
+# Define el titulo de la pagina web
+st.set_page_config('Tools and testing - 2023')    
 st.title(APP_TITLE)
 st.caption(APP_SUB_TITLE)
 
