@@ -61,17 +61,17 @@ color_i = list(pozos["color_icono"])
 prefijo = list(pozos["Prefijo"])
 #Ticono = list(pozos["icono"])
 
-MaxPPMm = max(PPMm)
-st.write(MaxPPMm)
+MaxPPMp = max(PPMp)
+st.write(MaxPPMp)
 
-NorPPMm = []
-for i in range(len(PPMm)):
-    NorPPMm.append(PPMm[i]/MaxPPMm)
-del NorPPMm[0]
-st.write(NorPPMm)
+NorPPMp = []
+for i in range(len(PPMp)):
+    NorPPMm.append(PPMp[i]/MaxPPMp)
+del NorPPMp[0]
+st.write(NorPPMp)
+
 DataHeat = [0]
-
-for lat, log, NorPPM in zip(Latitud, Longitud, NorPPMm):
+for lat, log, NorPPM in zip(Latitud, Longitud, NorPPMp):
     DataHeat.append([lat, log, NorPPM])
 del DataHeat[0]
 st.write(DataHeat)
