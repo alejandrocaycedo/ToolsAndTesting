@@ -30,7 +30,7 @@ st.title(APP_TITLE)
 st.caption(APP_SUB_TITLE)
     
     #Load Data
-pozos = pd.read_csv('/app/toolsandtesting/blob/main/Pozos.csv')
+pozos = pd.read_csv('/app/toolsandtesting/main/Pozos.csv')
 
 st.write(pozos.shape)
 st.write(pozos.head())
