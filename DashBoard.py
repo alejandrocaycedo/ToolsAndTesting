@@ -31,7 +31,7 @@ from streamlit_folium import st_folium
 
 """------------------------------------------------------------------
 
-Definición del nombre de la App 
+#Definición del nombre de la App 
 ---------------------------------------------------------------------"""
 APP_TITLE = 'Monitoreo de arrastre de sólidos - TOOLS AND TESTING'
 APP_SUB_TITLE = 'Ver 1.0 - todos los derechos reservados'
