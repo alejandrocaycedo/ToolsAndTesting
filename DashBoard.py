@@ -13,7 +13,7 @@ import folium
 import webbrowser
 from folium import plugins
 from folium.plugins.marker_cluster import MarkerCluster # Agrega los puntos espaciales
-
+from folium.plugins import HeatMap
 #from folium.folium import Map
 from folium.map import Marker
 
@@ -60,7 +60,9 @@ um425 = list(pozos["mayor_425um"])
 color_i = list(pozos["color_icono"])
 prefijo = list(pozos["Prefijo"])
 #Ticono = list(pozos["icono"])
-
+MaxPPMm = max(PPMm)
+NorPPMm = PPMm/MaxPPMm
+DataHeat = [Latitud, Longitud, NorPPMm]
         # DISPLAY FILTERS AND MAP
 mc_pozos = MarkerCluster()
 mapa = folium.Map(location = [7.10, -73.98],
@@ -80,7 +82,7 @@ mapa.add_child(capa_pozos)
 
 st_mapa = st_folium(mapa, width=800, height=650)
     # DISPLAY METRICS
-
+HeatMap(DataHeat).add_to(mapa)
 st.write(pozos.shape)
 st.write(pozos.head())
     
