@@ -61,9 +61,9 @@ color_i = list(pozos["color_icono"])
 prefijo = list(pozos["Prefijo"])
 #Ticono = list(pozos["icono"])
 MaxPPMm = max(PPMm)
-
+NorPPM = []
 for i in range(len(PPMm)):
-    NorPPMm = PPMm[i]/MaxPPMm
+    NorPPMm.append(PPMm[i]/MaxPPMm)
 
 st.write(NorPPMm)
 for lat, log, NorPPM in zip(Latitud, Longitud, NorPPMm):
