@@ -61,7 +61,7 @@ color_i = list(pozos["color_icono"])
 prefijo = list(pozos["Prefijo"])
 #Ticono = list(pozos["icono"])
 MaxPPMm = max(PPMm)
-NorPPM = []
+NorPPMm = []
 for i in range(len(PPMm)):
     NorPPMm.append(PPMm[i]/MaxPPMm)
 
