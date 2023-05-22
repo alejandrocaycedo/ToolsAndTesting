@@ -72,7 +72,7 @@ capa_pozos = folium.FeatureGroup(name="pozos")
 mc_pozos.add_to(capa_pozos)
 mapa.add_child(capa_pozos)
 
-st_mapa = st_folium(mapa, width=700, height=450)
+st_mapa = st_folium(mapa, width=800, height=650)
     # DISPLAY METRICS
     
     
