@@ -61,7 +61,10 @@ color_i = list(pozos["color_icono"])
 prefijo = list(pozos["Prefijo"])
 #Ticono = list(pozos["icono"])
 MaxPPMm = max(PPMm)
-NorPPMm = PPMm[:]/MaxPPMm
+
+for i in range(len(PPMm)):
+    NorPPMm = PPMm[i]/MaxPPMm
+    
 DataHeat = [Latitud, Longitud, NorPPMm]
         # DISPLAY FILTERS AND MAP
 mc_pozos = MarkerCluster()
