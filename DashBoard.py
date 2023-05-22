@@ -36,7 +36,8 @@ st.write(pozos.head())
     # DISPLAY FILTERS AND MAP
 mapa = folium.Map(location = [7.10, -73.98],
                      zoom_start = 12)
-st_mapa = st_folium(mapa)
+
+
 nombre = list(pozos["NamePozo"])
 Latitud = list(pozos["Latitud"])
 Longitud = list(pozos["Longitud"])
@@ -69,6 +70,8 @@ for nomb,lat,lon, bw, bo, bf, bs, PMp, PMm, um25, um45, um106, um212, um42, col_
 capa_pozos = folium.FeatureGroup(name="pozos")
 mc_pozos.add_to(capa_pozos)
 mapa.add_child(capa_pozos)
+
+st_mapa = st_folium(mapa)
     # DISPLAY METRICS
     
     
