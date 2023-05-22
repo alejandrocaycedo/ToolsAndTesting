@@ -54,7 +54,7 @@ um212to425 = list(pozos["212_425um"])
 um425 = list(pozos["mayor_425um"])
 color_i = list(pozos["color_icono"])
 prefijo = list(pozos["Prefijo"])
-Ticono = list(pozos["icono"])
+#Ticono = list(pozos["icono"])
 
 mc_pozos = MarkerCluster()
 mapa = folium.Map(location = [7.10, -73.98],
