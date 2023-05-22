@@ -91,6 +91,7 @@ for nomb,lat,lon, bw, bo, bf, bs, PMp, PMm, um25, um45, um106, um212, um42, col_
 capa_pozos = folium.FeatureGroup(name="pozos")
 mc_pozos.add_to(capa_pozos)
 mapa.add_child(capa_pozos)
+HeatMap(DataHeat).add_to(mapa)
 st_mapa = st_folium(mapa, width=1024, height=800)
 
 MapaCalor = folium.Map(location = [7.10, -73.98],
