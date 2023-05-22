@@ -69,7 +69,7 @@ DataHeat = [0]
 
 for lat, log, NorPPM in zip(Latitud, Longitud, NorPPMm):
     DataHeat.append([lat, log, NorPPM])
-
+st.write(DataHeat)
        # DISPLAY FILTERS AND MAP
 mc_pozos = MarkerCluster()
 mapa = folium.Map(location = [7.10, -73.98],
@@ -89,6 +89,7 @@ mapa.add_child(capa_pozos)
 
 MapaCalor = mapa = folium.Map(location = [7.10, -73.98],
                      zoom_start = 12)
+
 HeatMap(DataHeat).add_to(MapaCalor)
 
 st_mapa = st_folium(mapa, width=800, height=650)
