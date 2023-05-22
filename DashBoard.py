@@ -68,7 +68,7 @@ for i in range(len(PPMm)):
 DataHeat = [0]
 
 for lat, log, NorPPM in zip(Latitud, Longitud, NorPPMm):
-    DataHeat.append([lat, Log, NorPPM])
+    DataHeat.append([lat, log, NorPPM])
 st.write(DataHeat) 
        # DISPLAY FILTERS AND MAP
 mc_pozos = MarkerCluster()
