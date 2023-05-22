@@ -64,11 +64,13 @@ MaxPPMm = max(PPMm)
 NorPPMm = []
 for i in range(len(PPMm)):
     NorPPMm.append(PPMm[i]/MaxPPMm)
+del NorPPMm[0]
 
 DataHeat = [0]
 
 for lat, log, NorPPM in zip(Latitud, Longitud, NorPPMm):
     DataHeat.append([lat, log, NorPPM])
+del DataHeat[0]
 st.write(DataHeat)
        # DISPLAY FILTERS AND MAP
 mc_pozos = MarkerCluster()
