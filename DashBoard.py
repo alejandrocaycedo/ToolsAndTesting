@@ -65,7 +65,7 @@ for nomb,lat,lon, bw, bo, bf, bs, PMp, PMm, um25, um45, um106, um212, um42, col_
     popup= "<b> Nombre: </b>" +str(nomb)+ "<br><b> PPM Promedio: <b>" +str(PMp)+"<br>", max_width=4000, min_width=4000,
     icon=folium.Icon(color=col_i,
     icon_color="blue",
-    icon=tower-observation,
+    icon="tower-observation",
     prefix=pref)))           
 
 capa_pozos = folium.FeatureGroup(name="pozos")
