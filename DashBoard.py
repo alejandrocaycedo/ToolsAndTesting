@@ -64,7 +64,8 @@ MaxPPMm = max(PPMm)
 
 for i in range(len(PPMm)):
     NorPPMm = PPMm[i]/MaxPPMm
- 
+
+st,write(NorPPMm)
 for lat, log, NorPPM in zip(Latitud, Longitud, NorPPMm):
     DataHeat.append([lat, Log, NorPPM])
         # DISPLAY FILTERS AND MAP
