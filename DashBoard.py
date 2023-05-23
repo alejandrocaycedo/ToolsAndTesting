@@ -86,7 +86,7 @@ for lat, log, NorPPM in zip(Latitud, Longitud, NorPPMp):
 del DataHeat[0]
 
 #-------------------------------------------------
-# DISPLAY MAP
+# Calculos  MAP
 #-------------------------------------------------
 mc_pozos = MarkerCluster()
 mapa = folium.Map(location = [7.10, -73.98],
@@ -104,6 +104,12 @@ capa_pozos = folium.FeatureGroup(name="pozos")
 mc_pozos.add_to(capa_pozos)
 mapa.add_child(capa_pozos)
 HeatMap(DataHeat).add_to(mapa)
+
+#------------------------------------------------
+# Diseño visual DashBoard
+#------------------------------------------------
+with columns [0]:
+    st.write(MaxPPMp)
 
 with columns [1]:
     st_mapa = st_folium(mapa, width=1024, height=800)
