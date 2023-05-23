@@ -83,7 +83,7 @@ st.write(NorPPMp)
 DataHeat = [0]
 for lat, log, NorPPM in zip(Latitud, Longitud, NorPPMp):
     DataHeat.append([lat, log, NorPPM])
-del DataHeat[0]
+#del DataHeat[0]
 #st.write(DataHeat)
 
 #-------------------------------------------------
