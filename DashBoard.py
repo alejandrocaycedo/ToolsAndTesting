@@ -84,7 +84,7 @@ for lat, log, NorPPM in zip(Latitud, Longitud, NorPPMp):
 del DataHeat[0]
 
 #-------------------------------------------------
-# DISPLAY FILTERS AND MAP
+# DISPLAY MAP
 #-------------------------------------------------
 mc_pozos = MarkerCluster()
 mapa = folium.Map(location = [7.10, -73.98],
@@ -106,8 +106,8 @@ st_mapa = st_folium(mapa, width=1024, height=800)
 
     # DISPLAY METRICS
 
-st.write(pozos.shape)
-st.write(pozos.head())
+#st.write(pozos.shape)
+#st.write(pozos.head())
     
     
     
