@@ -90,7 +90,7 @@ del DataHeat[0]
 #-------------------------------------------------
 mc_pozos = MarkerCluster()
 mapa = folium.Map(location = [7.10, -73.98],
-                     zoom_start = 6)
+                     zoom_start = 5)
 #Pozos al mapa
 for nomb,lat,lon, bw, bo, bf, bs, PMp, PMm, um25, um45, um106, um212, um42, col_i, pref in zip(nombre, Latitud, Longitud, BWPD, BOPD, BFPD, BSW, PPMp, PPMm, um25to45, um45to106, um106to212, um212to425, um425, color_i, prefijo):
     mc_pozos.add_child(folium.Marker(location=[float(lat),float(lon)],
@@ -113,7 +113,7 @@ with columns [0]:
 
 with columns [1]:
     st.write("Mapa de calor, valores PPM promedio y Ubicación de los pozos ")
-    st_mapa = st_folium(mapa, width=800, height=400)
+    st_mapa = st_folium(mapa, width=800, height=600)
 
     # DISPLAY METRICS
 
