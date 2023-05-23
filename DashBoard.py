@@ -62,7 +62,7 @@ prefijo = list(pozos["Prefijo"])
 #Ticono = list(pozos["icono"])
 
 #--------------------------------------------------
-# Calculo del maximo de PPMp
+# Calculo del maximo de PPMp .
 #--------------------------------------------------
 MaxPPMp = max(PPMp)
 st.write(MaxPPMp)
