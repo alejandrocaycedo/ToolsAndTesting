@@ -74,7 +74,7 @@ NorPPMp = []
 for i in range(len(PPMp)):
     st.write(PPMp[i])
     NorPPMp.append(PPMp[i]/MaxPPMp)
-del NorPPMp[0]
+#del NorPPMp[0]
 st.write(NorPPMp)
 
 #-------------------------------------------------
