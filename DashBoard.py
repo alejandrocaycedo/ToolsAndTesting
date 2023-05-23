@@ -71,7 +71,7 @@ st.write(MaxPPMp)
 #  Normalización de PPMp
 #--------------------------------------------------
 NorPPMp = []
-for i in range(len(PPMp))+1:
+for i in range(len(PPMp)):
     st.write(PPMp[i])
     NorPPMp.append(PPMp[i]/MaxPPMp)
 del NorPPMp[0]
