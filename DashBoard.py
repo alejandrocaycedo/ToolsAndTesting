@@ -112,6 +112,7 @@ with columns [0]:
     st.write(MaxPPMp)
 
 with columns [1]:
+    st.write("Mapa de calor valores PPM promedio y Ubicación de los pozos ")
     st_mapa = st_folium(mapa, width=1024, height=800)
 
     # DISPLAY METRICS
