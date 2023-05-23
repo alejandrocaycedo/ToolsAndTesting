@@ -72,7 +72,7 @@ st.write(MaxPPMp)
 #--------------------------------------------------
 NorPPMp = []
 for PPM in zip(PPMp):
-    NorPPMp.append([float(PPM)/MaxPPMp])
+    NorPPMp.append([PPM/MaxPPMp])
 del NorPPMp[0]
 st.write(NorPPMp)
 
