@@ -34,7 +34,7 @@ st.title(APP_TITLE)
 st.caption(APP_SUB_TITLE)
 
 st.sidebar.title("Consultas")
-
+columns = st.beta_columns((2,2))
 #--------------------------------------------------------------------------
 
 #CARGA DE LOS DATOS DESDE LAS FUENTES 
@@ -104,7 +104,9 @@ capa_pozos = folium.FeatureGroup(name="pozos")
 mc_pozos.add_to(capa_pozos)
 mapa.add_child(capa_pozos)
 HeatMap(DataHeat).add_to(mapa)
-st_mapa = st_folium(mapa, width=1024, height=800)
+
+with columns [1]:
+    st_mapa = st_folium(mapa, width=1024, height=800)
 
     # DISPLAY METRICS
 
