@@ -71,10 +71,10 @@ st.write(MaxPPMp)
 #  Normalización de PPMp
 #--------------------------------------------------
 NorPPMp = []
-for i in range(len(PPMp)):
-    NorPPMp.append(PPMp[i]/MaxPPMp)
+for PPM in zip(PPMp):
+    NorPPMp.append(PPM/MaxPPMp)
 del NorPPMp[0]
-#st.write(NorPPMp)
+st.write(NorPPMp)
 
 #-------------------------------------------------
 #  Genera los datos para el mapa de calor
