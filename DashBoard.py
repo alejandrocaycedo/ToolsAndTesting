@@ -74,8 +74,7 @@ NorPPMp = []
 for i in range(len(PPMp)):
     st.write(PPMp[i])
     NorPPMp.append(PPMp[i]/MaxPPMp)
-#del NorPPMp[0]
-st.write(NorPPMp)
+
 
 #-------------------------------------------------
 #  Genera los datos para el mapa de calor
@@ -84,7 +83,6 @@ DataHeat = [0]
 for lat, log, NorPPM in zip(Latitud, Longitud, NorPPMp):
     DataHeat.append([lat, log, NorPPM])
 del DataHeat[0]
-#st.write(DataHeat)
 
 #-------------------------------------------------
 # DISPLAY FILTERS AND MAP
