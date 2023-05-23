@@ -34,7 +34,7 @@ st.title(APP_TITLE)
 st.caption(APP_SUB_TITLE)
 
 st.sidebar.title("Consultas")
-columns = st.beta_columns((1,3))
+columns = st.beta_columns((2,2))
 #--------------------------------------------------------------------------
 
 #CARGA DE LOS DATOS DESDE LAS FUENTES 
