@@ -101,7 +101,7 @@ for nomb,lat,lon, bw, bo, bf, bs, PMp, PMm, um25, um45, um106, um212, um42, col_
         <title> Datos del Pozo </title>
         </head>
         <body>
-        <table border = "3" cellpadding = "5" cellspacing ="5">
+        <table border = "3" cellpadding = "5" cellspacing ="8">
         <tr>
         <tr>
             <th style="text-align: center; background-color:#ccccff"> Pozo</th>
