@@ -109,7 +109,7 @@ for nomb,lat,lon, bw, bo, bf, bs, PMp, PMm, um25, um45, um106, um212, um42, col_
             <th style="text-align: center; background-color:#ccccff"> BSW</th>
             <th style="text-align: center; background-color:#ccccff"> PPM(prom)</th>
         </tr>
-            <td style="text-align: center"> nomb</td>
+            <td style="text-align: center"> [nomb]</td>
             <td style="text-align: center">{bw}</td>
             <td style="text-align: center">{bs}</td>
             <td style="text-align: center">{PMp}</td>
