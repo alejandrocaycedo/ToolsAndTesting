@@ -104,25 +104,25 @@ for nomb,lat,lon, bw, bo, bf, bs, PMp, PMm, um25, um45, um106, um212, um42, col_
         <table align="center" style="border: 1px #000000 solid">
 	<thead>
 		<tr>
-			<th style="border: 1px #000000 solid">Descripción 1</th>
-			<th style="border: 1px #000000 solid">Valor 2</th>
+			<th style="border: 1px #000000 solid">Descripción </th>
+			<th style="border: 1px #000000 solid">Valor </th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
-			<td style="border: 1px #000000 solid">Cell 1x1</td>
+			<td style="border: 1px #000000 solid">Pozo</td>
 			<td style="border: 1px #000000 solid">Cell 2x1</td>
 		</tr>
 		<tr>
-			<td style="border: 1px #000000 solid">Cell 1x2</td>
+			<td style="border: 1px #000000 solid">BWPD</td>
 			<td style="border: 1px #000000 solid">Cell 2x2</td>
 		</tr>
 		<tr>
-			<td style="border: 1px #000000 solid">Cell 1x3</td>
+			<td style="border: 1px #000000 solid">BSW</td>
 			<td style="border: 1px #000000 solid">Cell 2x3</td>
 		</tr>
 		<tr>
-			<td style="border: 1px #000000 solid">Cell 1x4</td>
+			<td style="border: 1px #000000 solid">PPM prom</td>
 			<td style="border: 1px #000000 solid">Cell 2x4</td>
 		</tr>
 	</tbody>
