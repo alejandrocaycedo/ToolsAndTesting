@@ -111,7 +111,7 @@ for nomb,lat,lon, bw, bo, bf, bs, PMp, PMm, um25, um45, um106, um212, um42, col_
 	<tbody>
 		<tr>
 			<td style="border: 1px #000000 solid">Pozo</td>
-			<td style="border: 1px #000000 solid">+str(nomb)+</td>
+			<td style="border: 1px #000000 solid">{nomb}</td>
 		</tr>
 		<tr>
 			<td style="border: 1px #000000 solid">BWPD</td>
