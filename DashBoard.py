@@ -104,12 +104,12 @@ for nomb,lat,lon, bw, bo, bf, bs, PMp, PMm, um25, um45, um106, um212, um42, col_
         <table border = "3" cellpadding = "5" cellspacing ="5">
         <tr>
         <tr>
-            <th style="text-align: center; background-color:#ccccff"> Pozo:</th>
-            <th style="text-align: center; background-color:#ccccff"> BWPD:</th>
-            <th style="text-align: center; background-color:#ccccff"> BSW:</th>
-            <th style="text-align: center; background-color:#ccccff"> PPM(prom):</th>
+            <th style="text-align: center; background-color:#ccccff"> Pozo</th>
+            <th style="text-align: center; background-color:#ccccff"> BWPD</th>
+            <th style="text-align: center; background-color:#ccccff"> BSW</th>
+            <th style="text-align: center; background-color:#ccccff"> PPM(prom)</th>
         </tr>
-            <td style="text-align: center">{nomb}</td>
+            <td style="text-align: center">+str(nomb)</td>
             <td style="text-align: center">{bw}</td>
             <td style="text-align: center">{bs}</td>
             <td style="text-align: center">{PMp}</td>
