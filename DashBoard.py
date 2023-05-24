@@ -101,21 +101,32 @@ for nomb,lat,lon, bw, bo, bf, bs, PMp, PMm, um25, um45, um106, um212, um42, col_
         <title> Datos del Pozo </title>
         </head>
         <body>
-        <table border = "3" cellpadding = "5" cellspacing ="8">
-        <tr>
-        <tr>
-            <th style="text-align: center; background-color:#ccccff"> Pozo</th>
-            <th style="text-align: center; background-color:#ccccff"> BWPD</th>
-            <th style="text-align: center; background-color:#ccccff"> BSW</th>
-            <th style="text-align: center; background-color:#ccccff"> PPM(prom)</th>
-        </tr>
-            <td style="text-align: center"> [nomb]</td>
-            <td style="text-align: center">{bw}</td>
-            <td style="text-align: center">{bs}</td>
-            <td style="text-align: center">{PMp}</td>
-        
-        </tr>
-        </table>
+        <table align="center" style="border: 1px #000000 solid">
+	<thead>
+		<tr>
+			<th style="border: 1px #000000 solid">Header 1</th>
+			<th style="border: 1px #000000 solid">Header 2</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td style="border: 1px #000000 solid">Cell 1x1</td>
+			<td style="border: 1px #000000 solid">Cell 2x1</td>
+		</tr>
+		<tr>
+			<td style="border: 1px #000000 solid">Cell 1x2</td>
+			<td style="border: 1px #000000 solid">Cell 2x2</td>
+		</tr>
+		<tr>
+			<td style="border: 1px #000000 solid">Cell 1x3</td>
+			<td style="border: 1px #000000 solid">Cell 2x3</td>
+		</tr>
+		<tr>
+			<td style="border: 1px #000000 solid">Cell 1x4</td>
+			<td style="border: 1px #000000 solid">Cell 2x4</td>
+		</tr>
+	</tbody>
+</table>
         </body>
         </html>""",                                                                          #"<b> Nombre: </b>" +str(nomb)+ "<br><b> PPM Promedio: <b>" +str(PMp)+"<br>", max_width=4000, min_width=4000,
     icon=folium.Icon(color=col_i,
