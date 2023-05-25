@@ -9,5 +9,4 @@ import streamlit as st
 
 # SideBar
 st.sidebar.title('Tools and Testing - 2023')
-def Func_Estimaciones():
-    st.title('Estimaciones')
+st.title('Estimaciones')
