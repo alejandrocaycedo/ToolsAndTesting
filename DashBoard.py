@@ -37,7 +37,7 @@ st.caption(APP_SUB_TITLE)
 
 hide_footer_style = """
 <style>
-.reportview-container .main footer {visibility: hidden;}
+.reportview-container.main footer {visibility: hidden;}
 </style>
 """
 st.markdown(hide_footer_style, unsafe_allow_html=True)
