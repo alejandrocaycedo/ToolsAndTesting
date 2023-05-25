@@ -27,7 +27,7 @@ from datetime import datetime
 #Definición del nombre de la App 
 
 
-APP_TITLE = 'Monitoreo de arrastre de sólidos - TOOLS AND TESTING'
+APP_TITLE = 'Mapa de calor, valores PPM promedio y Ubicación de los pozos'
 APP_SUB_TITLE = 'Ver 1.0 - todos los derechos reservados'
 
 # Define el titulo de la pagina web
@@ -126,7 +126,7 @@ HeatMap(DataHeat).add_to(mapa)
 # Diseño visual DashBoard
 #------------------------------------------------
 
-st.write("Mapa de calor, valores PPM promedio y Ubicación de los pozos ")
+#st.write("Mapa de calor, valores PPM promedio y Ubicación de los pozos ")
 st_mapa = st_folium(mapa, width=900, height=600)
 
     # DISPLAY METRICS
