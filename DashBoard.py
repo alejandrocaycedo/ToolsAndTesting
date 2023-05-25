@@ -7,7 +7,7 @@ Created on Fri May 19 17:18:17 2023
 
 # Importar librerias
 import streamlit as st
-from MapaCalor import Func_MapaCalor
+from MapaCalor import Func_MapaCalor()
 from HistoricoPozos import Func_Historico
 from EstimacionesPozos import Func_Estimaciones
 
