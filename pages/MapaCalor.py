@@ -127,7 +127,7 @@ HeatMap(DataHeat).add_to(mapa)
 #------------------------------------------------
 
 #st.write("Mapa de calor, valores PPM promedio y Ubicación de los pozos ")
-st_mapa = st_folium(mapa, width=900, height=600)
+st_mapa = st_folium(mapa, width=1024, height=600)
 
     # DISPLAY METRICS
 
