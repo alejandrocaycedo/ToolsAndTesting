@@ -38,7 +38,7 @@ pages_main = {'Mapa de calor Concentración de sólidos por campo' : run_MapaCal
               'Historico de concentración de sólidos por pozo' : run_Historico ,
               'Estimaciones por pozo': run_Estimaciones
     }
-pages_main[page_selection]()
+pages_main[page_selection()]
 # abre pagina seleccionada
 st.sidebar.title("Selecione análisis")
 
