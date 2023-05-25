@@ -84,7 +84,7 @@ prefijo = list(pozos["Prefijo"])
 # Calculo del maximo de PPMp .
 #--------------------------------------------------
 MaxPPMp = max(PPMp)
-st.write(MaxPPMp)
+#st.write(MaxPPMp)
 
 #--------------------------------------------------
 #  Normalización de PPMp
