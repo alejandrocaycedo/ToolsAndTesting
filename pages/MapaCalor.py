@@ -52,15 +52,6 @@ hide_menu_style = """
 st.markdown(hide_menu_style, unsafe_allow_html= True)
 
 
-
-st.sidebar.title("Consultas")
-# expander in sidebar
-st.sidebar.subheader('Abrir')
-with st.sidebar.expander('Time'):
-    time = datetime.now().strftime("%H:%M:%S")
-    st.write('**%s**' % (time))
-
-columns = st.beta_columns((3,1))
 #--------------------------------------------------------------------------
 
 #CARGA DE LOS DATOS DESDE LAS FUENTES 
@@ -134,12 +125,9 @@ HeatMap(DataHeat).add_to(mapa)
 #------------------------------------------------
 # Diseño visual DashBoard
 #------------------------------------------------
-with columns [1]:
-    st.write(MaxPPMp)
 
-with columns [0]:
-    st.write("Mapa de calor, valores PPM promedio y Ubicación de los pozos ")
-    st_mapa = st_folium(mapa, width=900, height=600)
+st.write("Mapa de calor, valores PPM promedio y Ubicación de los pozos ")
+st_mapa = st_folium(mapa, width=900, height=600)
 
     # DISPLAY METRICS
 
