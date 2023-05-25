@@ -6,5 +6,7 @@ Created on Thu May 25 11:42:52 2023
 """
 import streamlit as st
 
+# SideBar
+st.sidebar.title('Tools and Testing - 2023')
 def Func_Historico():
     st.title('Historico')
