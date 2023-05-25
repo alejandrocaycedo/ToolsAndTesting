@@ -21,27 +21,6 @@ st.set_page_config('Tools and testing - 2023')
 st.title(APP_TITLE)
 st.caption(APP_SUB_TITLE)
 
-#Configuración de la pagina
-
-def run_MapaCalor():
-    Func_MapaCalor()
-
-def run_Historico():
-    Func_Historico()
-    
-def run_Estimaciones():
-    Func_Estimaciones()
-
-def main():
-    st.sidebar.subheader('Tipo de análisis')
-    page_selection = st.sidebar.selectbox('Seleccionar tipo de análisis', ['Mapa de calor Concentración de sólidos por campo', 'Historico de concentración de sólidos por pozo','Estimaciones por pozo'])
-    pages_main = {'Mapa de calor Concentración de sólidos por campo' : run_MapaCalor ,
-                  'Historico de concentración de sólidos por pozo' : run_Historico ,
-                  'Estimaciones por pozo': run_Estimaciones
-        }
-    pages_main[page_selection]
-# abre pagina seleccionada
-st.sidebar.title("Selecione análisis")
 
 
     
