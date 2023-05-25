@@ -94,7 +94,7 @@ mapa = folium.Map(location = [7.10, -73.98],
 #Pozos al mapa
 for nomb,lat,lon, bw, bo, bf, bs, PMp, PMm, um25, um45, um106, um212, um42, col_i, pref in zip(nombre, Latitud, Longitud, BWPD, BOPD, BFPD, BSW, PPMp, PPMm, um25to45, um45to106, um106to212, um212to425, um425, color_i, prefijo):
     mc_pozos.add_child(folium.Marker(location=[float(lat),float(lon)],
-    popup= "<b> Pozo: </b>" +str(nomb)+ "<br><b> PPM Promedio: <b>" +str(PMp)+"<br><b> BWPD: <b>"+str(bw)+ "<br><b> BSW (%): <b>"+str(bs), max_width=4000, min_width=4000,
+    popup= "<b> Pozo: </b> " +str(nomb)+ "<br><b> PPM Promedio: <b>" +str(PMp)+"<br><b> BWPD: <b>"+str(bw)+ "<br><b> BSW (%): <b>"+str(bs), max_width=4000, min_width=4000,
     icon=folium.Icon(color=col_i,
     icon_color="blue",
     icon="tower-observation",
