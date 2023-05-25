@@ -104,8 +104,8 @@ for nomb,lat,lon, bw, bo, bf, bs, PMp, PMm, um25, um45, um106, um212, um42, col_
         <table align="center" style="border: 1px #000000 solid">
 	<thead>
 		<tr>
-			<th style="border: 1px #000000 solid">Descripción </th>
-			<th style="border: 1px #000000 solid">Valor </th>
+			<th style="border: 1px #000000 solid"> Descripción </th>
+			<th style="border: 1px #000000 solid"> Valor </th>
 		</tr>
 	</thead>
 	<tbody>
