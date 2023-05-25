@@ -25,7 +25,7 @@ st.caption(APP_SUB_TITLE)
 
 st.sidebar.subheader('Tipo de análisis')
 page_selection = st.sidebar.selectbox('Seleccionar tipo de análisis', ['Mapa de calor Concentración de sólidos por campo', 'Historico de concentración de sólidos por pozo','Estimaciones por pozo'])
-pages_main = {'Mapa de calor Concentración de sólidos por campo' : Func_MapaCalor() ,
+pages_main = {'Mapa de calor Concentración de sólidos por campo' : run_MapaCalor ,
               'Historico de concentración de sólidos por pozo' : run_Historico ,
               'Estimaciones por pozo': run_Estimaciones
     }
