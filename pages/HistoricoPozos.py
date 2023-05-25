@@ -8,5 +8,4 @@ import streamlit as st
 
 # SideBar
 st.sidebar.title('Tools and Testing - 2023')
-def Func_Historico():
-    st.title('Historico')
+st.title('Historico')
