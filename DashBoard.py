@@ -21,7 +21,8 @@ from folium.map import Marker
 import streamlit as st
 from streamlit_folium import st_folium
 
-
+# importar fecha y hora
+from datetime import datetime
 
 #Definición del nombre de la App 
 
@@ -49,7 +50,15 @@ hide_menu_style = """
 """
 st.markdown(hide_menu_style, unsafe_allow_html= True)
 
+
+
 st.sidebar.title("Consultas")
+# expander in sidebar
+st.sidebar.subheader('Abrir')
+with st.sidebar.expander('Time'):
+    time = datetime.now().strftime("%H:%M:%S")
+    st.write('**%s**' % (time))
+
 columns = st.beta_columns((3,1))
 #--------------------------------------------------------------------------
 
