@@ -19,7 +19,7 @@ st.set_page_config('Tools and testing - 2023')
 st.title(APP_TITLE)
 st.caption(APP_SUB_TITLE)
 
-
+st.sidebar.title('Tools and Testing - 2023')
 
     
     
