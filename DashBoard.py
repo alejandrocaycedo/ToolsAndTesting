@@ -33,6 +33,14 @@ st.set_page_config('Tools and testing - 2023')
 st.title(APP_TITLE)
 st.caption(APP_SUB_TITLE)
 
+#Configuración de la pagina
+
+hide_footer_style = "'
+<style>
+.reportview-container .main footer {visibility: hidden;}
+'"
+st.markdown(hide_footer_style, unsafe_allow_html=True)
+
 st.sidebar.title("Consultas")
 columns = st.beta_columns((3,1))
 #--------------------------------------------------------------------------
