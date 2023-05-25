@@ -7,9 +7,7 @@ Created on Fri May 19 17:18:17 2023
 
 # Importar librerias
 import streamlit as st
-from pages.MapaCalor import Func_MapaCalor
-from pages.HistoricoPozos import Func_Historico
-from pages.EstimacionesPozos import Func_Estimaciones
+
 
 #Definición del nombre de la App 
 
