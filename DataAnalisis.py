@@ -18,9 +18,6 @@ conexion = sqlite3.connect("C:/Users/ALEJANDRO/Documents/GitHub/ToolsAndTesting/
 # Archivo con la información de los pozos, coordenadas , Tipo, Estructura y MOP
 pozos = pd.read_excel('C:/Users/ALEJANDRO/Documents/GitHub/ToolsAndTesting/DataBase/COORDENADAS.XLSX')
 
-# Archivi con la información del monitoreo 
-monitoreo = pd.read_excel('C:/Users/ALEJANDRO/Documents/GitHub/ToolsAndTesting/DataBase/Monitoreo.XLSX')
-
 # Estructura pozos
 nombre = list(pozos["NAME"])
 X = list(pozos["TOPX"])
@@ -29,19 +26,72 @@ Currenttype = list(pozos["CURRENTTYPE"])
 STRUCTURE= list(pozos["STRUCTURE"])
 MOP = list(pozos["MOP"])
 
+# Archivo con la información del monitoreo 
+monitoreo = pd.read_excel('C:/Users/ALEJANDRO/Documents/GitHub/ToolsAndTesting/DataBase/Monitoreo.XLSX')
+
 #Estructura Monitoreo
-registro = list(monitoreo[""])
+pozo = list(monitoreo["POZO"])
+regist = list(monitoreo["REGISTRO"])
+als = list(monitoreo["ALS"])
+formacion = list(monitoreo["FORMACION"])
+contrato = list(monitoreo["CONTRATO"])
+fechaMonitoreo = list(monitoreo["FechaMonitoreo"])
+bwpd = list(monitoreo["BWPD"]) 
+bopd = list(monitoreo["BOPD"])
+bfpd = list(monitoreo["BFPD"])
+bsw = list(monitoreo["BSW"])
+PPMaverage = list(monitoreo["PPMaverage"])
+PPMmax = list(monitoreo["PPMmax"])
+p25to45 = list(monitoreo["P25to45"])
+p45to106 = list(monitoreo["P45to106"])
+p106to212 = list(monitoreo["P106to212"])
+p212to250 = list(monitoreo["P212to250"])
+p250to425 = list(monitoreo["P250to425"])
+pm425 = list(monitoreo["PM425"])
+cuadrilla = list(monitoreo["CUADRILLA"])
 
+# Archivo con la información del pozo producción
+prodVolumen = pd.read_excel('C:/Users/ALEJANDRO/Documents/GitHub/ToolsAndTesting/DataBase/PRODUCCION.XLSX', sheet_name='VOLUMEN')
+prodBSW = pd.read_excel('C:/Users/ALEJANDRO/Documents/GitHub/ToolsAndTesting/DataBase/PRODUCCION.XLSX', sheet_name='BSW')
 
+# estructura produccion Volumen
+Vpozo = list(prodVolumen["POZO"])
+Vfecha = list(prodVolumen["FECHA"])
+VBFD = list(prodVolumen["BFD"])
+Vtipo =list(prodVolumen["TIPO"])
+
+# estructura produccion BSW
+BSWpozo = list(prodBSW["POZO"])
+BSWfecha = list(prodBSW["FECHA"])
+BSWbsw = list(prodBSW["BSW"])
+
+# escribir en la base de datos la tabla Info_Produccion
+for Vpoz , Vfec, Vbf, Vtip in zip(Vpozo, Vfecha, VBFD, Vtipo):
+    conexion.execute("insert into Info_Produccion(NamePoz, Fecha, BFPD, Tipo) values(?,?,?,?)",(Vpoz , str(Vfec), Vbf, Vtip))
+    
+# escribir en la base de datos la tabla Info_BSW
+for BSWpoz, BSWfec, BSWbs in zip(BSWpozo, BSWfecha, BSWbsw):
+    conexion.execute("insert into Info_BSW(NamePoz, Fecha, BSW) values(?,?,?)",(BSWpoz, str(BSWfec), BSWbs))
+
+# escribir en la base de datos la tabla Coordenadas
 for nom, x, y in zip(nombre, X, Y):
      p1=pyproj.Proj(proj='utm', zone=17, ellps='WGS84', preserve_units=False)
      (lat,lon)=p1(x, y, inverse=True)
-     conexion.execute("insert into Coordenadas(NamePozo,Latitud,Longitud) values(?,?,?)",(nom, lon , lat))
+     conexion.execute("insert into Coordenadas(NamePoz,Latitud,Longitud) values(?,?,?)",(nom, lon , lat))
 
+# escribir en la base de datos la tabla Info_Pozo
 for nom, cur, struc, mop in zip(nombre, Currenttype, STRUCTURE, MOP):
     conexion.execute("insert into Info_Pozo(NamePozo, CurrentType, Structure, MOP) values(?,?,?,?)", (nom, cur, struc, mop))
 
+# escribir en la base de datos la tabla Info_Monitoreo
+for regi , poz, al, form, contr, fecham, bw, bo, bf, bs, Paverage, Pmax, pu25, pu45, pu106, pu212, pu250, pu425, cuadri in zip(regist, pozo, als, formacion, contrato, fechaMonitoreo, bwpd, bopd, bfpd, bsw, PPMaverage, PPMmax, p25to45, p45to106, p106to212, p212to250, p250to425, pm425, cuadrilla):
+    conexion.execute("insert into Info_Monitoreo(REGISTROTYT, NamePoz, ALS, Formacion, Contrato, FechaMonitoreo, BWPD, BOPD, BFPD, BSW, PPMaverage, PPMmax, P25to45, P45to106, P106to212, P212to250, P250to425, PM425, Cuadrilla) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", (regi , poz, al, form, contr, str(fecham), bw, bo, bf, bs, Paverage, Pmax, pu25, pu45, pu106, pu212, pu250, pu425, cuadri))
+
+#conexion.execute('DELETE FROM Coordenadas;'); # borrar la informacion de una tabla de la base de datos 
+# actualizar la base de datos
 conexion.commit()
+
+# cerrar la conexion a la base de datos
 conexion.close()
 
 
