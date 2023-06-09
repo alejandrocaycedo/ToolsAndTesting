@@ -25,8 +25,8 @@ st.sidebar.title('Tools and Testing - 2023')
 col1, col2 = st.columns(2) 
 
 # Conectar a la base de datos
-conexion = sqlite3.connect("/app/toolsandtesting/DataBase/Database.sqlite") 
-pf = pd.read_sql('SELECT * from Info_Monitoreo', conexion)
+conexion = sqlite3.connect("/app/toolsandtesting/DataBase/Database.db") 
+pf = pd.read_sql_query('SELECT * from Info_Monitoreo', conexion)
 with col1:
     st.write(heat)    
 
