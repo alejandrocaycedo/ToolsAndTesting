@@ -31,7 +31,7 @@ with col1:
     st.write(conexion)    
 
 with col2:
-       st.write("ok" ) 
+       st.write(conexion) 
     
     
     
