@@ -8,7 +8,7 @@ Created on Fri May 19 17:18:17 2023
 # Importar librerias
 import streamlit as st
 import pandas as pd
-import sqlite3
+import mysql.connector
 import os
 
 #Definición del nombre de la App 
@@ -25,11 +25,17 @@ st.sidebar.title('Tools and Testing - 2023')
 col1, col2 = st.columns(2) 
 
 # Conectar a la base de datos
-conexion = sqlite3.connect("/app/toolsandtesting/DataBase/Database.db") 
-cursor = conexion.cursor()
-cursor.execute(f"SELECT * FROM Info_Monitoreo")
-data = c.fetchall
-#pf = pd.read_sql_query('SELECT * from Info_Monitoreo', conexion)
+config = {
+    'host': 'toolsandtestingdb.mysql.database.azure.com',
+    'user': 'toolsandtesting',
+    'password': "Aa94105280",
+    'database':'mydatabase',
+    'raise_on_warnings': True
+    }
+
+# se realiza la conexion a la base de datos en azure. 
+conexion = mysql.connector.connect(**config)
+pf = pd.read_sql_query('SELECT * from Info_Monitoreo', conexion)
 with col1:
     st.write(conexion)    
 
