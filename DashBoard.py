@@ -7,7 +7,8 @@ Created on Fri May 19 17:18:17 2023
 
 # Importar librerias
 import streamlit as st
-
+import pandas as pd
+import sqlite3
 
 #Definición del nombre de la App 
 
@@ -20,9 +21,11 @@ st.title(APP_TITLE)
 st.caption(APP_SUB_TITLE)
 
 st.sidebar.title('Tools and Testing - 2023')
+col1, col2 = st.columns(2) 
 
-    
- col1, col2 = st.columns(2)  
+# Conectar a la base de datos
+DataBase = sqlite3.connect("/app/toolsandtesting/DataBase/Database.db") 
+pf = pd.read_sql_query("SELECT* FROM Coordenadas", DataBase)
 with col1:
     
 
