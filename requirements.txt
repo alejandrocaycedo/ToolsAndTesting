@@ -4,4 +4,3 @@ folium>=0.13
 pandas 
 jinja2
 branca
-sqlite3
