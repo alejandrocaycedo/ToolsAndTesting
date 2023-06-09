@@ -25,12 +25,13 @@ col1, col2 = st.columns(2)
 
 # Conectar a la base de datos
 DataBase = sqlite3.connect("/app/toolsandtesting/DataBase/Database.db") 
-pf = pd.read_sql_query("SELECT* FROM Coordenadas", DataBase)
+pf = pd.read_sql_query("SELECT * FROM Coordenadas", DataBase)
 with col1:
     st.write(heat)    
 
 with col2:
        st.write(heat)  
+    
     
     
     
