@@ -25,7 +25,7 @@ col1, col2 = st.columns(2)
 
 # Conectar a la base de datos
 con = db.connect("/app/toolsandtesting/DataBase/Database.db") 
-pf = pd.read_sql_query("SELECT * from Info_Monitoreo", con)
+pf = pd.read_sql_query('SELECT * from Info_Monitoreo', con)
 with col1:
     st.write(heat)    
 
