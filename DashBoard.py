@@ -27,7 +27,7 @@ col1, col2 = st.columns(2)
 # Conectar a la base de datos
 conexion = sqlite3.connect("/app/toolsandtesting/DataBase/Database.db") 
 cursor = conexion.cursor()
-#pf = pd.read_sql_query('SELECT * from Info_Monitoreo', conexion)
+pf = pd.read_sql_query('SELECT * from Info_Monitoreo', cursor)
 with col1:
     st.write(conexion)    
 
