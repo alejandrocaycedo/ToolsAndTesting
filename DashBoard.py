@@ -31,7 +31,7 @@ with col1:
     st.write("ok")    
 
 with col2:
-       st.write("ok"  
+       st.write("ok" ) 
     
     
     
