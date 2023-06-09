@@ -31,7 +31,7 @@ with col1:
     st.write(head)    
 
 with col2:
-       st.write(head)  
+       st.write(head())  
     
     
     
