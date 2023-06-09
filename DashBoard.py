@@ -26,12 +26,13 @@ col1, col2 = st.columns(2)
 
 # Conectar a la base de datos
 conexion = sqlite3.connect("/app/toolsandtesting/DataBase/Database.db") 
+cursor = conexion.cursor()
 #pf = pd.read_sql_query('SELECT * from Info_Monitoreo', conexion)
 with col1:
     st.write(conexion)    
 
 with col2:
-       st.write(conexion) 
+       st.write(cursor) 
     
     
     
