@@ -14,7 +14,7 @@ import os
 # Importar projección a UTM
 import pyproj
 
-
+st.set_page_config('Tools and testing - 2023')
 """
 ---------------------------------------------------------------------------
 Estructura APP DashBoard
@@ -24,7 +24,7 @@ APP_TITLE = 'Tools And Testing - Monitoreo de Sólidos'
 APP_SUB_TITLE = 'Ver 1.0 - todos los derechos reservados'
 
 # Define el titulo de la pagina web
-st.set_page_config('Tools and testing - 2023')    
+    
 st.title(APP_TITLE)
 st.caption(APP_SUB_TITLE)
 
