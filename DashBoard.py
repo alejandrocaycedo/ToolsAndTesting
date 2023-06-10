@@ -43,6 +43,7 @@ if (ConectarDB == 0):
     monitoreo = pd.read_csv('/app/toolsandtesting/DataBase/Monitoreo.csv', sep=';')
     prodVolumen = pd.read_csv('/app/toolsandtesting/DataBase/PRODUCCION_Volumen.csv', sep=';')
     prodBSW = pd.read_csv('/app/toolsandtesting/DataBase/PRODUCCION_BSW.csv', sep=';')
+    st.write(head(monitoreo))
 else:
     config = {
         'host': 'toolsandtestingdb.mysql.database.azure.com',
