@@ -38,7 +38,7 @@ Definición de la fuente de datos 0: Archivos tipo CSV    1: Archivos en DB Azur
 """
 ConectarDB = 0
 
-if ConectarDB = 0:
+if (ConectarDB == 0):
     pozos = pd.read_csv('/app/toolsandtesting/DataBase/COORDENADAS.csv', sep=';')
     monitoreo = pd.read_csv('/app/toolsandtesting/DataBase/Monitoreo.csv', sep=';')
     prodVolumen = pd.read_csv('/app/toolsandtesting/DataBase/PRODUCCION_Volumen.csv', sep=';')
