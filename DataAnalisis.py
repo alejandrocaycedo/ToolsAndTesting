@@ -108,6 +108,7 @@ for regi , poz, al, form, are, fecham, bw, bo, bf, bs, Paverage, Pmax, pu25, pu4
 # actualizar la base de datos
 conexion.commit()
 
+
 # cerrar la conexion a la base de datos
 conexion.close()
 
