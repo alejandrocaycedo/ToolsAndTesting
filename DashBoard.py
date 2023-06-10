@@ -15,11 +15,11 @@ import os
 import pyproj
 
 st.set_page_config('Tools and testing - 2023')
-"""
----------------------------------------------------------------------------
-Estructura APP DashBoard
---------------------------------------------------------------------------- 
-"""
+
+#---------------------------------------------------------------------------
+#Estructura APP DashBoard
+#--------------------------------------------------------------------------- 
+
 APP_TITLE = 'Tools And Testing - Monitoreo de Sólidos'
 APP_SUB_TITLE = 'Ver 1.0 - todos los derechos reservados'
 
@@ -31,11 +31,11 @@ st.caption(APP_SUB_TITLE)
 st.sidebar.title('Tools and Testing - 2023')
 col1, col2 = st.columns(2) 
 
-"""
----------------------------------------------------------------------------
-Definición de la fuente de datos 0: Archivos tipo CSV    1: Archivos en DB Azure
----------------------------------------------------------------------------
-"""
+
+#---------------------------------------------------------------------------
+#Definición de la fuente de datos 0: Archivos tipo CSV    1: Archivos en DB Azure
+#---------------------------------------------------------------------------
+
 ConectarDB = 0
 
 if (ConectarDB == 0):
@@ -55,11 +55,11 @@ else:
     conexion = mysql.connector.connect(**config)
     pf = pd.read_sql_query('SELECT * from Info_Monitoreo', conexion)
 
-"""
----------------------------------------------------------------------------
-Estructuras para los datos datos 
----------------------------------------------------------------------------
-"""
+
+#---------------------------------------------------------------------------
+#Estructuras para los datos datos 
+#---------------------------------------------------------------------------
+
 #--------------------------------------------------------------------------
 # Estructura pozos
 nombre = list(pozos["NAME"])
@@ -109,11 +109,11 @@ BSWbsw = list(prodBSW["BSW"])
 
 # End estrucutras
 
-"""
------------------------------------------------------------------------------
- Convertir coordenadas a UTM
------------------------------------------------------------------------------
-"""
+
+#-----------------------------------------------------------------------------
+# Convertir coordenadas a UTM
+#-----------------------------------------------------------------------------
+
 posicion = [0]
 for x, y, namepozo in zip(X, Y, nombre):
     p1=pyproj.Proj(proj='utm', zone=17, ellps='WGS84', preserve_units=False)
