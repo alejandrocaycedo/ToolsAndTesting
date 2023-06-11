@@ -149,7 +149,7 @@ with col1:
          icon=folium.Icon(color=col_i,
          icon_color="blue",
          icon="tower-observation",
-         prefix=)))           
+         prefix='fa')))           
 
      capa_pozos = folium.FeatureGroup(name="pozos")
      mc_pozos.add_to(capa_pozos)
