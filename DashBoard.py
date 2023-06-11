@@ -45,6 +45,7 @@ if (ConectarDB == 0):
     prodBSW = pd.read_csv('/app/toolsandtesting/DataBase/PRODUCCION_BSW.csv', sep=';')
     
 else:
+    import mysql.connector
     config = {
         'host': 'toolsandtestingdb.mysql.database.azure.com',
         'user': 'toolsandtesting',
@@ -83,7 +84,7 @@ als = list(monitoreo["ALS"])
 formacion = list(monitoreo["FORMACION"])
 area = list(monitoreo["AREA"])
 fechaMonitoreo = list(str(monitoreo["FechaMonitoreo"]))
-bwpd = list(monitoreo["BWPD"]) 
+#bwpd = list(monitoreo["BWPD"]) 
 bopd = list(monitoreo["BOPD"])
 bfpd = list(monitoreo["BFPD"])
 bsw = list(monitoreo["BSW"])
