@@ -143,7 +143,7 @@ with col1:
      mapa = folium.Map(location = [7.10, -73.98],
                           zoom_start = 5)
      #Pozos al mapa
-     for nomb,lat,lon in zip(posicion):
+     for nomb,lat,lon in zip(posicion['namepozo'], posicion[Latitud], posicion['Longitud']):
          mc_pozos.add_child(folium.Marker(location=[float(lat),float(lon)],
          popup= "<b> Pozo: </b> " +str(nomb) , max_width=14000, min_width=10000,
          icon=folium.Icon(color=col_i,
