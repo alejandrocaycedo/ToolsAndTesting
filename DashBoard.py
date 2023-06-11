@@ -11,13 +11,22 @@ import pandas as pd
 #import mysql.connector
 import os
 
+
 # Importar projección a UTM
 import pyproj
 import math
 
 
-# Ploty 
-import plotly.graph_objects as go
+# Folium
+import folium
+import webbrowser
+from folium import plugins
+from folium.plugins.marker_cluster import MarkerCluster # Agrega los puntos espaciales
+from folium.plugins import HeatMap
+#from folium.folium import Map
+from folium.map import Marker
+from streamlit_folium import st_folium
+
 
 st.set_page_config('Tools and testing - 2023')
 
@@ -130,13 +139,22 @@ for x, y, namepozo in zip(X, Y, nombre):
 del posicion[0]
 
 with col1:
-     fig = go.Figure(data = go.Scattergeo(
-         lon = posicion['Longitud'],
-         lat = posicion['Latitud'],
-         text = posicion['namepozo'],
-         ))
-     fig.update_layout(geo_escop = 'Ubicación Pozos',)
-     st.ploty_chart(fig)
+     mc_pozos = MarkerCluster()
+     mapa = folium.Map(location = [7.10, -73.98],
+                          zoom_start = 5)
+     #Pozos al mapa
+     for nomb,lat,lon in zip(posicion):
+         mc_pozos.add_child(folium.Marker(location=[float(lat),float(lon)],
+         popup= "<b> Pozo: </b> " +str(nomb) , max_width=14000, min_width=10000,
+         icon=folium.Icon(color=col_i,
+         icon_color="blue",
+         icon="tower-observation",
+         prefix=)))           
+
+     capa_pozos = folium.FeatureGroup(name="pozos")
+     mc_pozos.add_to(capa_pozos)
+     mapa.add_child(capa_pozos)
+     
 with col2:
        st.write("prueba") 
     
