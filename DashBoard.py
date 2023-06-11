@@ -135,8 +135,8 @@ with col1:
          lat = posicion['Latitud'],
          text = posicion['namepozo'],
          ))
-      fig.update_layout(geo_escop = 'Ubicación Pozos',)
-      st.ploty_chart(fig)
+     fig.update_layout(geo_escop = 'Ubicación Pozos',)
+     st.ploty_chart(fig)
 with col2:
        st.write("prueba") 
     
