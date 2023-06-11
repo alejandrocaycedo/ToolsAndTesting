@@ -136,11 +136,11 @@ for x, y, namepozo in zip(X, Y, nombre):
     p1 = pyproj.Proj(proj='utm', zone=17, ellps='WGS84', preserve_units=False)
     (lon,lat)=p1(x, y, inverse=True)  
     posicion.append([namepozo, (lat - ajusteLatitud), (lon - ajusteLogitud)])
-del posicion[0]
+#del posicion[0]
 
-namep = list(posicion[0])
-lati = list(posicion[1])
-longi = list(posicion[2])
+namep = list(posicion['namepozo'])
+lati = list(posicion['latitud'])
+longi = list(posicion['Longitud'])
 st.write(namep)
 with col1:
      mc_pozos = MarkerCluster()
