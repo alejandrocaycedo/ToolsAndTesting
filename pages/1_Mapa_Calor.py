@@ -17,6 +17,8 @@ from folium.plugins import HeatMap
 #from folium.folium import Map
 from folium.map import Marker
 
+import plotly.graph_objects as go
+
 # importar streamlit para diagramar la APP
 import streamlit as st
 from streamlit_folium import st_folium
