@@ -129,7 +129,7 @@ with col1:
     st.write(lat , lon)    
 
 with col2:
-       st.write(posicion) 
+       st.write(*posicion) 
     
     
     
