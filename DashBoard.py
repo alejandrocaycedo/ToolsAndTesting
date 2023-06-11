@@ -141,7 +141,7 @@ del posicion[0]
 namep = list(posicion['namepozo'])
 lati = list(posicion['Latitud'])
 longi = list(posicion['Longitud'])
-
+st.write(namep)
 with col1:
      mc_pozos = MarkerCluster()
      mapa = folium.Map(location = [7.10, -73.98],
