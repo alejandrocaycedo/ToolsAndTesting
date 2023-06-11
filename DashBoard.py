@@ -138,9 +138,9 @@ for x, y, namepozo in zip(X, Y, nombre):
     posicion.append([namepozo, (lat - ajusteLatitud), (lon - ajusteLogitud)])
 del posicion[0]
 
-namep = list(posicion['namepozo'])
-lati = list(posicion['Latitud'])
-longi = list(posicion['Longitud'])
+namep = list(posicion[0])
+lati = list(posicion[1])
+longi = list(posicion[2])
 st.write(namep)
 with col1:
      mc_pozos = MarkerCluster()
