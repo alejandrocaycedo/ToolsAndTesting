@@ -124,7 +124,7 @@ for x, y, namepozo in zip(X, Y, nombre):
     (lon,lat)=p1(x, y, inverse=True)
     st.write(namepozo, (lat - ajusteLatitud) ,(lon - ajusteLogitud))  
     posicion.append([namepozo, (lat - ajusteLatitud), (lon - ajusteLogitud)])
-
+del posicion[0]
 with col1:
     st.write(lat , lon)    
 
