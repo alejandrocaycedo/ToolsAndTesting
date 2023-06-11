@@ -137,7 +137,7 @@ for x, y, namepozo in zip(X, Y, nombre):
     (lon,lat)=p1(x, y, inverse=True)  
     posicion.append([namepozo, (lat - ajusteLatitud), (lon - ajusteLogitud)])
 #del posicion[0]
-st,write(*posicion)
+st.write(*posicion)
 namep = list(posicion['namepozo'])
 lati = list(posicion['latitud'])
 longi = list(posicion['Longitud'])
