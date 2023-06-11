@@ -116,7 +116,8 @@ BSWbsw = list(prodBSW["BSW"])
 #-----------------------------------------------------------------------------
 # Convertir coordenadas a UTM
 #-----------------------------------------------------------------------------
-
+lon = 0
+lat = 0
 posicion = [0]
 for x, y, namepozo in zip(X, Y, nombre):
     p1 = pyproj.Proj(proj='utm', zone=17, ellps='WGS84', preserve_units=False)
@@ -125,7 +126,7 @@ for x, y, namepozo in zip(X, Y, nombre):
     posicion.append([namepozo, (lat - ajusteLatitud), (lon - ajusteLogitud)])
 
 with col1:
-    st.write(posicion)    
+    st.write(lat , lon)    
 
 with col2:
        st.write(posicion) 
