@@ -6,4 +6,3 @@ jinja2
 branca
 mysql.connector
 pyproj
-ploty
