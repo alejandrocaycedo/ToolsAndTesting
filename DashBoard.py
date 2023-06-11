@@ -15,6 +15,10 @@ import os
 import pyproj
 import math
 
+
+# Ploty 
+import plotly.graph_objects as go
+
 st.set_page_config('Tools and testing - 2023')
 
 #---------------------------------------------------------------------------
@@ -118,7 +122,7 @@ BSWbsw = list(prodBSW["BSW"])
 #-----------------------------------------------------------------------------
 lon = 0
 lat = 0
-posicion = [0]
+posicion = ['namepozo', 'latitud', 'Longitud']
 for x, y, namepozo in zip(X, Y, nombre):
     p1 = pyproj.Proj(proj='utm', zone=17, ellps='WGS84', preserve_units=False)
     (lon,lat)=p1(x, y, inverse=True)  
@@ -126,10 +130,15 @@ for x, y, namepozo in zip(X, Y, nombre):
 del posicion[0]
 
 with col1:
-    st.write(lat , lon)    
-
+     fig = go.Figure(data = go.Scattergeo(
+         lon = posicion['Longitud'],
+         lat = posicion['Latitud'],
+         text = posicion['namepozo'],
+         ))
+      fig.update_layout(geo_escop = 'Ubicación Pozos',)
+      st.ploty_chart(fig)
 with col2:
-       st.write(*posicion) 
+       st.write("prueba") 
     
     
     
