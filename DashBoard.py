@@ -122,7 +122,7 @@ posicion = [0]
 for x, y, namepozo in zip(X, Y, nombre):
     p1 = pyproj.Proj(proj='utm', zone=17, ellps='WGS84', preserve_units=False)
     (lon,lat)=p1(x, y, inverse=True)
-    st.write(lon , lat)  
+    st.write(namepozo, lon , lat)  
     posicion.append([namepozo, (lat - ajusteLatitud), (lon - ajusteLogitud)])
 
 with col1:
