@@ -153,6 +153,24 @@ longi = list(Slongitud)
 
 # dashboard
 with col1:
+    mc_pozos = MarkerCluster()
+     mapa = folium.Map(location = [6.8, -73.8],
+                          zoom_start = 3)
+     #Pozos al mapa
+     for nomb,lat,lon in zip(namep, lati, longi):
+         mc_pozos.add_child(folium.Marker(location=[float(lat),float(lon)],
+         popup= "<b> Pozo: </b> " +str(nomb) , max_width=14000, min_width=10000,
+         icon=folium.Icon("green",
+         icon_color="blue",
+         icon="tower-observation",
+         prefix='fa')))           
+
+     capa_pozos = folium.FeatureGroup(name="pozos")
+     mc_pozos.add_to(capa_pozos)
+     mapa.add_child(capa_pozos)
+     #st.write("Mapa de calor, valores PPM promedio y Ubicación de los pozos ")
+     st_mapa = st_folium(mapa, width=1024, height=600)
+     
      mc_pozos = MarkerCluster()
      mapa = folium.Map(location = [6.8, -73.8],
                           zoom_start = 3)
@@ -169,7 +187,7 @@ with col1:
      mc_pozos.add_to(capa_pozos)
      mapa.add_child(capa_pozos)
      #st.write("Mapa de calor, valores PPM promedio y Ubicación de los pozos ")
-     st_mapa = st_folium(mapa, width=2000, height=500)
+     st_mapa = st_folium(mapa, width=2000, height=600)
 with col2:
        st.write("prueba") 
     
