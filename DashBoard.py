@@ -140,8 +140,10 @@ for x, y, namepozo in zip(X, Y, nombre):
     Snombre.append([namepozo])
     Slatitud.append([lat - ajusteLatitud])
     Slongitud.append([lon - ajusteLogitud])
-del posicion[0]
-st.write(*posicion)
+del Snombre[0]
+del Slatitud[0]
+del Slongitud[0]
+
 namep = list(Snombre)
 lati = list(Slatitud)
 longi = list(Slongitud)
