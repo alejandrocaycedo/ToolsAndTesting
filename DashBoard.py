@@ -168,7 +168,8 @@ with col1:
      capa_pozos = folium.FeatureGroup(name="pozos")
      mc_pozos.add_to(capa_pozos)
      mapa.add_child(capa_pozos)
-     
+     #st.write("Mapa de calor, valores PPM promedio y Ubicación de los pozos ")
+     st_mapa = st_folium(mapa, width=1024, height=600)
 with col2:
        st.write("prueba") 
     
