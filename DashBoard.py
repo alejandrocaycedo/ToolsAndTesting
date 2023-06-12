@@ -155,7 +155,7 @@ longi = list(Slongitud)
 with col1:
      mc_pozos = MarkerCluster()
      mapa = folium.Map(location = [6.8, -73.8],
-                          zoom_start = 3)
+                          zoom_start = 5)
      #Pozos al mapa
      for nomb,lat,lon in zip(namep, lati, longi):
          mc_pozos.add_child(folium.Marker(location=[float(lat),float(lon)],
