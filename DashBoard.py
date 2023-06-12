@@ -43,7 +43,7 @@ st.title(APP_TITLE)
 st.caption(APP_SUB_TITLE)
 
 st.sidebar.title('Tools and Testing - 2023')
-col1, col2 = st.columns(3,1) 
+col1, col2 = st.columns([3,1]) 
 
 
 #---------------------------------------------------------------------------
