@@ -147,7 +147,7 @@ del Slongitud[0]
 namep = list(Snombre)
 lati = list(Slatitud)
 longi = list(Slongitud)
-st.write(namep , lati, longi)
+st.write(*namep , *lati, *longi)
 
 
 
