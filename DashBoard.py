@@ -43,7 +43,7 @@ st.title(APP_TITLE)
 st.caption(APP_SUB_TITLE)
 
 st.sidebar.title('Tools and Testing - 2023')
-col1, col2 = st.columns([3,1]) 
+col1, col2 = st.columns([0.7,0.3]) 
 
 
 #---------------------------------------------------------------------------
@@ -155,7 +155,7 @@ longi = list(Slongitud)
 with col1:
      mc_pozos = MarkerCluster()
      mapa = folium.Map(location = [6.8, -73.8],
-                          zoom_start = 5)
+                          zoom_start = 3)
      #Pozos al mapa
      for nomb,lat,lon in zip(namep, lati, longi):
          mc_pozos.add_child(folium.Marker(location=[float(lat),float(lon)],
