@@ -131,17 +131,25 @@ BSWbsw = list(prodBSW["BSW"])
 #-----------------------------------------------------------------------------
 lon = 0
 lat = 0
-posicion = ['namepozo', 'latitud', 'Longitud']
+Snombre = [0]
+Slatitud = [0]
+Slongitud = [0]
 for x, y, namepozo in zip(X, Y, nombre):
     p1 = pyproj.Proj(proj='utm', zone=17, ellps='WGS84', preserve_units=False)
     (lon,lat)=p1(x, y, inverse=True)  
-    posicion.append([namepozo, (lat - ajusteLatitud), (lon - ajusteLogitud)])
-#del posicion[0]
+    Snombre.append([namepozo])
+    Slatitud.append([lat - ajusteLatitud])
+    Slongitud.append([lon - ajusteLogitud])
+del posicion[0]
 st.write(*posicion)
-namep = list(posicion['namepozo'])
-lati = list(posicion['latitud'])
-longi = list(posicion['Longitud'])
-st.write(namep)
+namep = list(Snombre)
+lati = list(Slatitud)
+longi = list(Slongitud)
+st.write(namep , lati, longi)
+
+
+
+# dashboard
 with col1:
      mc_pozos = MarkerCluster()
      mapa = folium.Map(location = [7.10, -73.98],
