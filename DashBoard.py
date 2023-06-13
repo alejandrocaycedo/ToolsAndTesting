@@ -170,7 +170,7 @@ with col1:
      mc_pozos.add_to(capa_pozos)
      mapa.add_child(capa_pozos)
      #st.write("Mapa de calor, valores PPM promedio y Ubicación de los pozos ")
-     st_mapa = st_folium(mapa, center = center, width=1024, height=600)
+     st_mapa = st_folium(mapa, width=1200, height=500)
      
      mc_pozos = MarkerCluster()
      mapa = folium.Map(location = [6.8, -73.8],
