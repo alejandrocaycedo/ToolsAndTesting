@@ -195,8 +195,8 @@ with col2:
     monitoreo_max = monitoreo.groupby(['POZO'])[['PPMaverage','BSW']].max()
     monitoreo_min = monitoreo.groupby(['POZO'])[['PPMaverage','BSW']].min()   
     st.write(monitoreo_average) 
-    
-    
+    st.write(monitoreo_max)
+    st.write(monitoreo_min)
     
     
 if __name__ == "_main_":
