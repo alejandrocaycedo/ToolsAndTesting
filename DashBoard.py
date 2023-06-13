@@ -190,7 +190,11 @@ with col1:
      #st.write("Mapa de calor, valores PPM promedio y Ubicación de los pozos ")
      st_mapa = st_folium(mapa, width=2000, height=600)
 with col2:
-       st.write("prueba") 
+    # calcula el promedio , maximo y minimo del PPMaverage y BSW 
+    monitoreo_average = monitoreo.groupby(['POZO'])[['PPMaverage','BSW']].mean()
+    monitoreo_max = monitoreo.groupby(['POZO'])[['PPMaverage','BSW']].max()
+    monitoreo_min = monitoreo.groupby(['POZO'])[['PPMaverage','BSW']].min()   
+    st.write(monitoreo_average) 
     
     
     
