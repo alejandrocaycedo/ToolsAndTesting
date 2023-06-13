@@ -43,7 +43,7 @@ st.title(APP_TITLE)
 st.caption(APP_SUB_TITLE)
 
 st.sidebar.title('Tools and Testing - 2023')
-col1, col2 = st.columns([0.7,0.3]) 
+#col1, col2 = st.columns([0.7,0.3]) 
 
 
 #---------------------------------------------------------------------------
@@ -153,24 +153,24 @@ longi = list(Slongitud)
 
 
 # dashboard
-with col1:
-     mc_pozos = MarkerCluster()
-     mapa = folium.Map(location = [6.8, -73.8],
-                          zoom_start = 5)
-     #Pozos al mapa
-     for nomb,lat,lon in zip(namep, lati, longi):
-         mc_pozos.add_child(folium.Marker(location=[float(lat),float(lon)],
-         popup= "<b> Pozo: </b> " +str(nomb) , max_width=14000, min_width=10000,
-         icon=folium.Icon("green",
-         icon_color="blue",
-         icon="tower-observation",
-         prefix='fa')))           
-
-     capa_pozos = folium.FeatureGroup(name="pozos")
-     mc_pozos.add_to(capa_pozos)
-     mapa.add_child(capa_pozos)
-     #st.write("Mapa de calor, valores PPM promedio y Ubicación de los pozos ")
-     st_mapa = st_folium(mapa, width=1200, height=500)
+#with col1:
+mc_pozos = MarkerCluster()
+mapa = folium.Map(location = [6.8, -73.8],
+                     zoom_start = 5)
+#Pozos al mapa
+for nomb,lat,lon in zip(namep, lati, longi):
+    mc_pozos.add_child(folium.Marker(location=[float(lat),float(lon)],
+    popup= "<b> Pozo: </b> " +str(nomb) , max_width=14000, min_width=10000,
+    icon=folium.Icon("green",
+    icon_color="blue",
+    icon="tower-observation",
+    prefix='fa')))           
+   
+capa_pozos = folium.FeatureGroup(name="pozos")
+mc_pozos.add_to(capa_pozos)
+mapa.add_child(capa_pozos)
+#st.write("Mapa de calor, valores PPM promedio y Ubicación de los pozos ")
+st_mapa = st_folium(mapa, width=1200, height=500)
      
      mc_pozos = MarkerCluster()
      mapa = folium.Map(location = [6.8, -73.8],
@@ -189,14 +189,14 @@ with col1:
      mapa.add_child(capa_pozos)
      #st.write("Mapa de calor, valores PPM promedio y Ubicación de los pozos ")
      st_mapa = st_folium(mapa, width=2000, height=600)
-with col2:
+#with col2:
     # calcula el promedio , maximo y minimo del PPMaverage y BSW 
-    monitoreo_average = monitoreo.groupby(['POZO'])[['PPMaverage','BSW']].mean()
-    monitoreo_max = monitoreo.groupby(['POZO'])[['PPMaverage','BSW']].max()
-    monitoreo_min = monitoreo.groupby(['POZO'])[['PPMaverage','BSW']].min()   
-    st.write(monitoreo_average) 
-    st.write(monitoreo_max)
-    st.write(monitoreo_min)
+monitoreo_average = monitoreo.groupby(['POZO'])[['PPMaverage','BSW']].mean()
+monitoreo_max = monitoreo.groupby(['POZO'])[['PPMaverage','BSW']].max()
+monitoreo_min = monitoreo.groupby(['POZO'])[['PPMaverage','BSW']].min()   
+st.write(monitoreo_average) 
+st.write(monitoreo_max)
+st.write(monitoreo_min)
     
     
 if __name__ == "_main_":
