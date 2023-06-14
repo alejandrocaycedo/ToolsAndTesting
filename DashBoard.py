@@ -157,7 +157,7 @@ longi = list(Slongitud)
 # dashboard
 #with col1:
 mc_pozos = MarkerCluster()
-mapa = folium.Map(location = [6.8, -73.8],
+mapa = folium.Map(location = [6.8, -74.8],
                      zoom_start = 5)
 #Pozos al mapa
 for nomb,lat,lon in zip(namep, lati, longi):
