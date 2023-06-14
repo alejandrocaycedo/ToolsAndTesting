@@ -79,6 +79,7 @@ else:
 
 #--------------------------------------------------------------------------
 # Estructura pozos
+indice = lista(pozos["Nombre"])
 nombre = list(pozos["NAME"])
 X = list(pozos["TOPX"])
 Y = list(pozos["TOPY"])
