@@ -177,12 +177,8 @@ st_mapa = st_folium(mapa, width=1200, height=500)
 monitoreo_average = monitoreo.groupby(['POZO'])[['PPMaverage','BSW']].mean()
 monitoreo_max = monitoreo.groupby(['POZO'])[['PPMaverage','BSW']].max()
 monitoreo_min = monitoreo.groupby(['POZO'])[['PPMaverage','BSW']].min()   
-st.subheader('PPM promedio por Pozo')
-st.write(monitoreo_average) 
-st.subheader('PPM maximos por Pozo')
-st.write(monitoreo_max)
-st.subheader('PPM minimo por Pozo')
-st.write(monitoreo_min)
+
+monitoreo_average.plot()
     
     
 if __name__ == "_main_":
