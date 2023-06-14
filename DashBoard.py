@@ -179,7 +179,7 @@ monitoreo_average = monitoreo.groupby(['POZO'])[['PPMaverage','BSW']].mean()
 monitoreo_max = monitoreo.groupby(['POZO'])[['PPMaverage','BSW']].max()
 monitoreo_min = monitoreo.groupby(['POZO'])[['PPMaverage','BSW']].min()   
 
-monitoreo_average.plot()
+monitoreo.plot()
     
     
 if __name__ == "_main_":
