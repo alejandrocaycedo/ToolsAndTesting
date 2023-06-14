@@ -177,10 +177,6 @@ st_mapa = st_folium(mapa, width=1200, height=500)
     # calcula el promedio , maximo y minimo del PPMaverage y BSW 
 monitoreo_average = monitoreo.groupby(['POZO'])[['PPMaverage','BSW']].mean()
 monitoreo_max = monitoreo.groupby(['POZO'])[['PPMaverage','BSW']].max()
-monitoreo_min = monitoreo.groupby(['POZO'])[['PPMaverage','BSW']].min()   
-
-monitoreo.plot()
-    
-    
+monitoreo_min = monitoreo.groupby(['POZO'])[['PPMaverage','BSW']].min()       
 if __name__ == "_main_":
     main()
