@@ -184,7 +184,7 @@ with col3:
     monitoreo_max = monitoreo.groupby(['POZO'])[['PPMaverage','BSW']].max()
     st.write("PPM maximo por Pozo")
     st.write(monitoreo_max)
-with col4
+with col4:
     monitoreo_min = monitoreo.groupby(['POZO'])[['PPMaverage','BSW']].min() 
     st.write("PPM minimo por Pozo")      
     st.write(monitoreo_min)
