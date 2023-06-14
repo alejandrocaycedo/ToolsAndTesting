@@ -44,7 +44,7 @@ st.title(APP_TITLE)
 st.caption(APP_SUB_TITLE)
 
 st.sidebar.title('Tools and Testing - 2023')
-col1, col2, col3, col4 = st.columns([0.7,0.1, 0.1, 0.1]) 
+col2, col3, col4 = st.columns([0.33,0.33, 0.33]) 
 
 
 #---------------------------------------------------------------------------
@@ -155,24 +155,24 @@ longi = list(Slongitud)
 
 
 # dashboard
-with col1:
-    mc_pozos = MarkerCluster()
-    mapa = folium.Map(location = [7, -72.8],
-                         zoom_start = 5)
-    #Pozos al mapa
-    for nomb,lat,lon in zip(namep, lati, longi):
-        mc_pozos.add_child(folium.Marker(location=[float(lat),float(lon)],
-        popup= "<b> Pozo: </b> " +str(nomb) , max_width=14000, min_width=10000,
-        icon=folium.Icon("green",
-        icon_color="blue",
-        icon="tower-observation",
-        prefix='fa')))           
-       
-    capa_pozos = folium.FeatureGroup(name="pozos")
-    mc_pozos.add_to(capa_pozos)
-    mapa.add_child(capa_pozos)
-    #st.write("Mapa de calor, valores PPM promedio y Ubicación de los pozos ")
-    st_mapa = st_folium(mapa, width=1200, height=500)
+#with col1:
+mc_pozos = MarkerCluster()
+mapa = folium.Map(location = [7, -72.8],
+                     zoom_start = 5)
+#Pozos al mapa
+for nomb,lat,lon in zip(namep, lati, longi):
+    mc_pozos.add_child(folium.Marker(location=[float(lat),float(lon)],
+    popup= "<b> Pozo: </b> " +str(nomb) , max_width=14000, min_width=10000,
+    icon=folium.Icon("green",
+    icon_color="blue",
+    icon="tower-observation",
+    prefix='fa')))           
+   
+capa_pozos = folium.FeatureGroup(name="pozos")
+mc_pozos.add_to(capa_pozos)
+mapa.add_child(capa_pozos)
+#st.write("Mapa de calor, valores PPM promedio y Ubicación de los pozos ")
+st_mapa = st_folium(mapa, width=1200, height=500)
      
 with col2:
     # calcula el promedio , maximo y minimo del PPMaverage y BSW 
