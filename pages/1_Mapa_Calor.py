@@ -62,7 +62,7 @@ st.sidebar.title('Tools and Testing - 2023')
 
 #---------------------------------------------------------------------  
         #LOAD Data
-@st.cache
+@st.cache()
 pozos = pd.read_csv('/app/toolsandtesting/Pozo.csv', sep=';')
 
 # CARGAR LOS CAMPOS DE DATOS EN LAS LISTAS
