@@ -26,11 +26,11 @@ from streamlit_folium import st_folium
 from datetime import datetime
 
 #Definición del nombre de la App 
-@st.cache
+
 
 APP_TITLE = 'Mapa de calor, valores PPM promedio y Ubicación de los pozos'
 APP_SUB_TITLE = 'Ver 1.0 - todos los derechos reservados'
-
+@st.cache
 # Define el titulo de la pagina web
 st.set_page_config('Tools and testing - 2023')    
 st.title(APP_TITLE)
