@@ -30,7 +30,7 @@ from datetime import datetime
 
 APP_TITLE = 'Mapa de calor, valores PPM promedio y Ubicación de los pozos'
 APP_SUB_TITLE = 'Ver 1.0 - todos los derechos reservados'
-@st.cache
+
 # Define el titulo de la pagina web
 st.set_page_config('Tools and testing - 2023')    
 st.title(APP_TITLE)
@@ -62,6 +62,7 @@ st.sidebar.title('Tools and Testing - 2023')
 
 #---------------------------------------------------------------------  
         #LOAD Data
+@st.cache
 pozos = pd.read_csv('/app/toolsandtesting/Pozo.csv', sep=';')
 
 # CARGAR LOS CAMPOS DE DATOS EN LAS LISTAS
