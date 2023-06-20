@@ -62,12 +62,13 @@ st.sidebar.title('Tools and Testing - 2023')
 
 #---------------------------------------------------------------------  
         #LOAD Data
-pozos = pd.read_csv('/app/toolsandtesting/Pozos.csv', sep=';')
+pozos = pd.read_csv('/app/toolsandtesting/Pozo.csv', sep=';')
 
 # CARGAR LOS CAMPOS DE DATOS EN LAS LISTAS
 nombre = list(pozos["NamePozo"])
 Latitud = list(pozos["Latitud"])
 Longitud = list(pozos["Longitud"])
+Fecha = list(pozos["FechaMonitore"])
 BWPD = list(pozos["BWPD"])
 BOPD = list(pozos["BOPD"])
 BFPD = list(pozos["BFPD"])
@@ -112,7 +113,7 @@ mc_pozos = MarkerCluster()
 mapa = folium.Map(location = [7.10, -73.98],
                      zoom_start = 5)
 #Pozos al mapa
-for nomb,lat,lon, bw, bo, bf, bs, PMp, PMm, um25, um45, um106, um212, um42, col_i, pref in zip(nombre, Latitud, Longitud, BWPD, BOPD, BFPD, BSW, PPMp, PPMm, um25to45, um45to106, um106to212, um212to425, um425, color_i, prefijo):
+for nomb,lat,lon, fechas, bw, bo, bf, bs, PMp, PMm, um25, um45, um106, um212, um42, col_i, pref in zip(nombre, Latitud, Longitud, Fecha, BWPD, BOPD, BFPD, BSW, PPMp, PPMm, um25to45, um45to106, um106to212, um212to425, um425, color_i, prefijo):
     mc_pozos.add_child(folium.Marker(location=[float(lat),float(lon)],
     popup= "<b> Pozo: </b> " +str(nomb)+ "<br><b> PPM Promedio: <b>" +str(PMp)+"<br><b> BWPD: <b>"+str(bw)+ "<br><b> BSW (%): <b>"+str(bs), max_width=14000, min_width=10000,
     icon=folium.Icon(color=col_i,
