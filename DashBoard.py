@@ -54,10 +54,10 @@ col2, col3, col4 = st.columns([0.33,0.33, 0.33])
 ConectarDB = 0
 
 if (ConectarDB == 0):
-    pozos = pd.read_csv('/app/toolsandtesting/DataBase/COORDENADAS.csv', sep=';')
-    monitoreo = pd.read_csv('/app/toolsandtesting/DataBase/Monitoreo.csv', sep=';')
-    prodVolumen = pd.read_csv('/app/toolsandtesting/DataBase/PRODUCCION_Volumen.csv', sep=';')
-    prodBSW = pd.read_csv('/app/toolsandtesting/DataBase/PRODUCCION_BSW.csv', sep=';')
+    pozos = pd.read_csv('C:/toolsandtesting/DataBase/COORDENADAS.csv', sep=';')
+    monitoreo = pd.read_csv('C:/toolsandtesting/DataBase/Monitoreo.csv', sep=';')
+    prodVolumen = pd.read_csv('C:/toolsandtesting/DataBase/PRODUCCION_Volumen.csv', sep=';')
+    prodBSW = pd.read_csv('C:/toolsandtesting/DataBase/PRODUCCION_BSW.csv', sep=';')
     
 else:
     import mysql.connector
