@@ -63,7 +63,7 @@ st.sidebar.title('Tools and Testing - 2023')
 #---------------------------------------------------------------------  
         #LOAD Data
 
-pozos = pd.read_csv('/app/toolsandtesting/Pozo.csv', sep=';')
+pozos = pd.read_csv('C:/toolsandtesting/Pozo.csv', sep=';')
 
 # CARGAR LOS CAMPOS DE DATOS EN LAS LISTAS
 nombre = list(pozos["NamePozo"])
