@@ -1,0 +1,24 @@
+DESARROLLO BASE DE DATOS PARA TOOLS AND TESTING
+
+Motor de base de datos: POSTGRESQL 15.4 WIN 64
+
+			https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
+
+Contraseña super Usuario:  Aa94105280
+
+Puerto servidor POSTGRESQL: 5432
+
+
+SETTINGS FOR INSTALLATION 
+summary.installation.directory: C:\Program Files\PostgreSQL\15
+summary.server.installation.directory: C:\Program Files\PostgreSQL\15
+summary.data.directory: C:\Program Files\PostgreSQL\15\data
+summary.database.port: 5432
+summary.database.superuser: postgres
+summary.serviceaccount: NT AUTHORITY\NetworkService
+summary.databaseservice: postgresql-x64-15
+summary.clt.installation.directory: C:\Program Files\PostgreSQL\15
+summary.pgadmin.installation.directory: C:\Program Files\PostgreSQL\15\pgAdmin 4
+summary.sbp.installation.directory: C:\Program Files\PostgreSQL\15
+summary.installation.logfile: C:\Users\ALEJANDRO\AppData\Local\Temp\install-postgresql.log
+
